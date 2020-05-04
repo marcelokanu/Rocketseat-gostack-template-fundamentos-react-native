@@ -42,12 +42,15 @@ const CartProvider: React.FC = ({ children }) => {
 
   const addToCart = useCallback(
     async product => {
-      const productExist = products.findIndex(item => item.id === product.id);
+      const productExist = products.find(item => item.id === product.id);
 
-      if (productExist > -1) {
+      if (productExist) {
         setProducts(
           products.map(productFinded => {
-            return { ...productFinded, quantity: productFinded.quantity + 1 };
+            if (productFinded.id === productExist.id) {
+              return { ...productFinded, quantity: productFinded.quantity + 1 };
+            }
+            return productFinded;
           }),
         );
       } else {
