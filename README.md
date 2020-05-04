@@ -19,7 +19,7 @@ App desenvolvido durante estudos do bootcamp GoStack da RocketSeat :rocket:
 
 5. Executar via terminal o comando `yarn json-server server.json -p 3333` para rodar o fake server.
 
-6. Utilizando Android Studio Emulator no windows: Executar via terminal o comando react-native run:android
+6. Utilizando Android Studio Emulator no windows: Executar via terminal o comando `react-native run:android`
 
 
 
